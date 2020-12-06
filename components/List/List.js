@@ -55,14 +55,16 @@ export default function List({ active, todos, setTodos }) {
         todos
           .filter((todo) => todo.done)
           .map((todo) => <ListItem key={todo.content} todo={todo} />)}
-      {active === "Completed" && (
-        <button
-          className="self-end mt-4 p-2 w-2/6 rounded-xl text-white bg-red-cEB5757"
-          onClick={() => setTodos([])}
-        >
-          Delete all
-        </button>
-      )}
+      {active === "Completed" &&
+        todos.length !== 0 &&
+        todos.find((todo) => todo.done) && (
+          <button
+            className="self-end mt-4 p-2 w-2/6 rounded-xl text-white bg-red-cEB5757"
+            onClick={() => setTodos([])}
+          >
+            Delete all
+          </button>
+        )}
     </div>
   )
 }

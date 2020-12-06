@@ -27,7 +27,7 @@ export default function Form({ todos, setTodos }) {
       />
       <button
         onClick={() => handleAdd(value)}
-        className="p-2 w-2/6 rounded-xl text-white bg-blue-c2F80ED"
+        className="p-2 w-2/6 rounded-xl text-white bg-blue-c2F80ED focus:outline-none"
       >
         Add
       </button>
