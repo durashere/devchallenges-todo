@@ -59,7 +59,7 @@ export default function List({ active, todos, setTodos }) {
         todos.length !== 0 &&
         todos.find((todo) => todo.done) && (
           <button
-            className="self-end mt-4 p-2 w-2/6 rounded-xl text-white bg-red-cEB5757"
+            className="self-end mt-4 p-2 w-2/6 rounded-xl text-white bg-red-cEB5757 focus:outline-none"
             onClick={() => setTodos([])}
           >
             Delete all
