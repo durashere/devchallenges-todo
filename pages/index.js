@@ -41,7 +41,7 @@ export default function Home() {
       </main>
 
       <footer className="text-center">
-        <p className="py-4 font-mont text-sm font-semibold text-gray-cA9A9A9">
+        <p className="py-4 font-mont font-semibold text-sm text-gray-cA9A9A9">
           <a href="https://github.com/durashere">durashere</a> @{" "}
           <a href="https://devchallenges.io">DevChallenges.io</a>
         </p>

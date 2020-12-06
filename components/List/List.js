@@ -18,14 +18,17 @@ export default function List({ active, todos, setTodos }) {
       <div className="flex justify-between">
         <div className="flex items-center gap-2">
           <input
+            className="transform scale-125"
             id={todo.content}
             type="checkbox"
             checked={todo.done}
             onChange={() => handleChange(todo.content)}
           ></input>
           <label
+            className={`font-mont font-medium text-black ${
+              todo.done && "line-through"
+            }`}
             htmlFor={todo.content}
-            className={`${todo.done && "line-through"}`}
           >
             {todo.content}
           </label>
@@ -60,7 +63,7 @@ export default function List({ active, todos, setTodos }) {
         todos.find((todo) => todo.done) && (
           <button
             className="self-end mt-4 p-2 w-2/6 rounded-xl text-white bg-red-cEB5757 focus:outline-none"
-            onClick={() => setTodos([])}
+            onClick={() => setTodos(todos.filter((todo) => !todo.done))}
           >
             Delete all
           </button>

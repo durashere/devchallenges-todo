@@ -4,7 +4,8 @@ export default function Form({ todos, setTodos }) {
   const [value, setValue] = useState("")
   const [placeholder, setPlaceholder] = useState("Add details")
 
-  const handleAdd = (value) => {
+  const handleAdd = (e) => {
+    e.preventDefault()
     if (todos.find((todo) => todo.content === value)) {
       setPlaceholder("Todo already exist")
       setValue("")
@@ -17,20 +18,20 @@ export default function Form({ todos, setTodos }) {
   }
 
   return (
-    <div className="flex justify-between gap-4">
+    <form className="flex justify-between gap-4 font-mont font-semibold text-sm">
       <input
-        className="p-2 w-full rounded-xl border border-gray-cBDBDBD"
+        className="p-2 w-full rounded-xl text-black border border-gray-cBDBDBD"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         type="text"
         placeholder={placeholder}
       />
       <button
-        onClick={() => handleAdd(value)}
+        onClick={(e) => handleAdd(e)}
         className="p-2 w-2/6 rounded-xl text-white bg-blue-c2F80ED focus:outline-none"
       >
         Add
       </button>
-    </div>
+    </form>
   )
 }
