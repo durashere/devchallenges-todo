@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">Windbnb</h1>
+<h1 align="center">Todo</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -12,11 +12,11 @@
       Demo
     </a>
     <span> | </span>
-    <a href="TO_CHANGE">
+    <a href="https://github.com/durashere/devchallenges-todo">
       Solution
     </a>
     <span> | </span>
-    <a href="TO_CHANGE">
+    <a href="https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5">
       Challenge
     </a>
   </h3>
@@ -40,7 +40,11 @@
 
 ### User Stories
 
-- [x] Example story
+- [ ] User story: I can add a new task
+- [ ] User story: I can complete a task
+- [ ] User story: I can toggle between All, Active and Completed
+- [ ] User story: I can remove one or all tasks under the Completed tab
+- [ ] User story (optional): Store the data in local storage that when I refresh the page I can still see my progress
 
 ### Built With
 
